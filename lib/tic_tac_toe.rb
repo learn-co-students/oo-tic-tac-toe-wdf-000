@@ -250,16 +250,31 @@ class TicTacToe
     won? ? @board[won?[0]] : nil
   end
 
+
   def play
-    # binding.pry
-    if !over?
+
+    until over?
       turn
-      play
-    elsif
-       draw?
+    end
+
+
+
+    if draw?
       puts "Cats Game!"
     else
       puts "Congratulations #{winner}!"
     end
   end
+  # def play
+    # binding.pry
+    # if !over?
+    #   turn
+    #   play
+    # elsif
+    #    draw?
+    #   puts "Cats Game!"
+    # else
+    #   puts "Congratulations #{winner}!"
+  #   end
+  # end
 end
