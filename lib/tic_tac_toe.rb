@@ -27,12 +27,16 @@ class TicTacToe
     @board[input.to_i - 1] = token
   end
 
-  def position_taken?(board = @board, position)
-    board[position] == "X" || board[position] == "O"
+  def position(position)
+    @board[position.to_i]
+  end
+
+  def position_taken?(position)
+    position(position) == "X" || position(position) == "O"
   end
 
   def valid_move?(input)
-    input.to_i.between?(1, 9) && !position_taken?(board = @board, input.to_i - 1)
+    input.to_i.between?(1,9) && !position_taken?(input.to_i-1)
   end
 
   def turn
