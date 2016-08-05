@@ -91,9 +91,11 @@ describe './lib/tic_tac_toe.rb' do
         game.instance_variable_set(:@board, board)
 
         position = "1"
+        # position = 1
         expect(game.valid_move?(position)).to be_truthy
 
         position = "5"
+        # position = 5
         expect(game.valid_move?(position)).to be_falsey
 
         position = "invalid"
