@@ -1,0 +1,8 @@
+structures:
+WIN_COMBINATIONS = [
+[],[],[]...
+]
+@board = ["","",""...]
+**
+select items from @board with indices in each win_combo element
+if all three items are the same => game has been won
